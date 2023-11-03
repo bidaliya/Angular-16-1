@@ -26,19 +26,19 @@
   <Button (click)="generate()" [disabled]="!length || (!wantLetter && !wantNumbers && !wantSymbols)">Generate</Button>     
 </div>
 
-<div class="generatedPass">
+<div class="generatedPass" *ngIf="password">
   <label >Your Password</label>
   <!--! Property binding syntax-->
   <!-- <input type="text" [value]="password"> -->
   <input type="text" [value]="getPassword()">  
 </div>
 
-<div class="container">
+<!-- <div class="container">
   <button class="btn btn-primary">Click me!</button>
-</div>
+</div> -->
 
 <!--!Interpolation-->
 <!-- {{ getPassword() }} <br>    
 {{ password }} -->
 
-
+ 
